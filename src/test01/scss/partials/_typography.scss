@@ -1,0 +1,15 @@
+// # Include to get all modules
+// The modules directory is reserved for Sass code that doesn't cause Sass to actually output CSS. Things like mixin declarations, functions, and variables.
+@import '_colors.scss';
+
+//Emerald Typography 
+$primary-fontcolor: #73AD21;
+$primary-border: 2px solid #849868;
+
+ html, body {
+	font-size: 16px;
+	font-family: 'WeblySleek UI';
+}
+
+
+

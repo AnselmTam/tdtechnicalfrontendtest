@@ -1,0 +1,42 @@
+// #buttons
+//Primary Mixin
+
+
+
+button.ng-binding.ng-scope: hover {
+
+}
+
+button.ng-binding.ng-scope: active {
+
+}
+
+button.ng-binding.ng-scope {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 3px;
+    background: white;
+    border: $primary-border;
+    width: 300px;
+    height: auto;
+    font-size: 15px;
+    font-weight: 200;
+    color: #849868
+}
+
+
+#rcorners1 {
+    border-radius: 25px;
+    background: #333;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
