@@ -1,14 +1,9 @@
 'use strict';
 
-var app = angular.module('app,' ['pascalprecht.translate']);
+var app = angular.module('myApp', ['pascalprecht.translate']);
 
-app.config(function ($translateProvider) {
-	$translateProvider.fallbacklanguage('en');
-	$translateProvider.registerAvailableLanguageKeys(['en', 'fr']),{
-		//teach app to ignore variation i.e. en_us
-		'en_*':'en',
-		'fr_*':'fr'
-	};
+
+app.config(['$translateProvider', function ($translateProvider) {
 
 	$translateProvider.translations('en', {
 		TITLE: "Book an Appointment",
@@ -29,16 +24,7 @@ app.config(function ($translateProvider) {
 	});
 
 	$translateProvider.preferredLanguage('en');
-});
-
-
-app.controller('ctrl',['$translate', function(translate) {
-	var vm = this;
-	vm.changeLanguage = function(key) {
-		$translate.use(key);
-	};
 }]);
-
 
 
 export const test01 = {
@@ -46,20 +32,18 @@ export const test01 = {
 	controller($http) {
 		var state = this;
 		state.data = [];
-
-
 //returns a promise based callback of the json data 
 //Running a nested for loop to populate the array and then push out a new array to format the data 
-
-		$http.get('test01/data.json').then(function(result) {
+		$http.get('test01/data.json').then(function(result), (fail) {
 			for (var prop in result.data) {
-				var item = result.data[prop];
-				for (var i in item) {
-					state.data.push(item[i]) 
+				var text = result.data[prop];
+				for (var i in text) {
+					state.data.push(text[i]) 
 				}
 			}
+			.catch(handleError);
 			if (result.data.length == 1) {
-				var oneButton = state.data[0]; 
+				var showOnlyOne = state.data[0]; 
 			}
 		})
 
