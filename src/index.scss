@@ -2,10 +2,10 @@
 $primary-fontcolor: #73AD21;
 $primary-border: 2px solid #849868;
 $tabletWidth: 200px;
-
-html, body {
-	width: 100%;
-	height: 100%;
+html,
+body {
+    width: 100%;
+    height: 100%;
     font-family: 'WeblySleek UI';
     background-color: white;
 }
@@ -13,11 +13,19 @@ html, body {
 .title h1,
 .title h2,
 .title h3,
-.title h4, {
+.title h4,
+{
     text-align: center;
     color: black;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+    color: black
+}
 
 p.subheader {
     text-align: center;
@@ -27,7 +35,6 @@ p.subheader {
 h2.Introduction {
     text-align: center;
 }
-
 
 button.ng-binding.ng-scope {
     margin: 10px;
@@ -44,7 +51,7 @@ button.ng-binding.ng-scope {
     width: 400px
 }
 
-.col-centered{
+.col-centered {
     float: none;
     margin: 0 auto;
 }
@@ -53,14 +60,12 @@ button.ng-binding.ng-scope {
     max-width: 50%;
 }
 
-
 .col-xs-12.col-md-12.col-lg-12.td-custom {
     float: none;
     margin: auto;
-    width: 80%;
+    width: 60%;
     text-align: center;
 }
-
 
 
 /*==================================================
@@ -68,63 +73,117 @@ button.ng-binding.ng-scope {
 ==================================================*/
 
 
-    /*==========  Mobile First Method  ==========*/
+/*==========  Mobile First Method  ==========*/
 
 
- /* Custom, iPhone Retina */ 
-    @media only screen and (min-width : 0px) and (max-width: 320px) {
+/* Custom, iPhone Retina */
 
+@media only screen and (min-width: 0px) and (max-width: 320px) {
     .title h1,
     .title h2,
     .title h3,
-    .title h4, {
-    text-align: center;
-    color: black;
+    .title h4,
+    {
+        text-align: center;
+        color: black;
     }
-
     button.ng-binding.ng-scope {
-    @extend button.ng-binding.ng-scope
-    width: 100px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 3px;
+        background: white;
+        border: 2px solid #849868;
+        height: auto;
+        font-size: 15px;
+        font-weight: 200;
+        color: #849868;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 400px;
+    }
 }
 
-    /* Custom, iPhone Retina */ 
-    @media only screen and (min-width : 320px) and (max-width: 480px) {
 
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     .title h1,
     .title h2,
     .title h3,
-    .title h4, {
-    text-align: center;
-    color: black;
+    .title h4,
+    {
+        text-align: center;
+        color: black;
     }
-
     button.ng-binding.ng-scope {
-    @extend button.ng-binding.ng-scope
-    width: 200px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 3px;
+        background: white;
+        border: 2px solid #849868;
+        height: auto;
+        font-size: 15px;
+        font-weight: 200;
+        color: #849868;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 200px;
+    }
 }
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .col-xs-12.col-md-12.col-lg-12.td-custom {
+        width: 70%;
     }
-
-    /* Extra Small Devices, Phones */ 
-    @media only screen and (min-width : 480px) and (max-width: 768px) {
-
-
-    }
-
-    /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) and (max-width: 992px) {
-
     button.ng-binding.ng-scope {
-    @extend button.ng-binding.ng-scope
-    width: $tabletWidth;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 3px;
+        background: white;
+        border: 2px solid #849868;
+        height: auto;
+        font-size: 15px;
+        font-weight: 200;
+        color: #849868;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: $tabletWidth;
     }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+.col-xs-12.col-md-12.col-lg-12.td-custom {
+    width: 70%;
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+    .col-xs-12.col-md-12.col-lg-12.td-custom {
+        width: 80%;
     }
+}
 
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) and (max-width: 1200px) {
-
+@media only screen and (min-width: 1920px) and (max-width: 2560px) {
+    .col-xs-12.col-md-12.col-lg-12.td-custom {
+        width: 60%;
     }
-
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) and (max-width: 1400px) {
-
-    }
+}

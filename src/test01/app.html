@@ -4,12 +4,12 @@
             <div class="row">
                 <div class="col-xs-12 col-md-12 col-lg-12">
                     <header class="title">
-                        <h1>Book an Appointment</h1></header>
+                        <h1>{{ 'TITLE' | translate }}</h1></header>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-12 col-lg-12">
-                    <p class="subheader">Our Investing Topics</p>
+                    <p class="subheader">{{ 'SUBHEADER' | translate }}</p>
                 </div>
             </div>
     </div>
@@ -17,16 +17,23 @@
     <section class="container-fluid" id="subheader">
         <div class="row">
             <div class="col-xs-12 col-md-12 col-lg-12">
-                <h2 class="Introduction">Pick a topic, then we'll find a time and place</h2>
+                <h4>{{ 'PICKATOPIC' | translate }}</h4>
             </div>
         </div>
 </div>
 </section>
 <section class="container-fluid" id="buttons">
-    <div class="col-xs-12 col-md-12 col-lg-12 td-custom">
-        <div class="col-xs-12 col-md-12 col-lg-12">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12 td-custom">
             <button ng-repeat="button in $ctrl.state.data">{{button}}</button>
         </div>
+    </div>
+</section>
+<section class="container-fluid" id="paragraph">
+    <div class="col-xs-12 col-md-12 col-lg-12 td-custom">
+        <font></font>
+        <h4 class="Return"><a href="#">&lt; {{ 'RETURN' | translate }}</a></h2>
+        <button type="button" class="btn btn-info active" ng-click="changeLanguage('en')">English<button type="button" class="btn btn-info active" ng-click="changeLanguage('fr')">French</button>
     </div>
 </section>
 </div>

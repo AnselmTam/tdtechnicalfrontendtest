@@ -9,6 +9,7 @@ import routesConfig from './routes';
 import {hello} from './app/hello';
 import {test01} from './test01/app';
 import {test02} from './test02/app';
+import {button} from './customdirective/customDirective';
 
 import './index.scss';
 
